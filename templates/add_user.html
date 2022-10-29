@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <div class='row'>
+    <div class='col-5 mx-auto'>
+      <h3>Add user</h3><hr>
+      <form method='post' action='{{url_for("add_user")}}'>
+        <div class='form-group'>
+
+
+          <label>First Name</label>
+          <input type='text' name='fname' required class='form-control'>
+
+
+          <label>Last Name</label>
+          <input type='text' name='lname' required class='form-control'>
+
+          <label>Domine</label>
+          <input type='text' name='domine' required class='form-control'>
+
+          <label>Coumpany Email</label>
+          <input type='text' name='email' required class='form-control'>
+
+
+          <label>Clients</label>
+          <input type='text' name='cilents' required class='form-control'>
+
+          <label>date time</label>
+          <input type="datetime-local" name="datetime" id="birthdaytime" class='form-control' name="birthdaytime">
+
+          <label>Notes</label>
+          <input type='text' name='notes'  class='form-control'>
+
+        </div>
+
+
+        <div class='form-group'>
+          <label>Contact</label>
+          <input type='text' name='contact' required class='form-control'>
+        </div>
+        <input type='submit' value='Submit' class='btn btn-primary'>
+      </form>
+    
+    </div>
+  </div>
+{% endblock %}

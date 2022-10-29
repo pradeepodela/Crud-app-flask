@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <div class='row'>
+    <div class='col-5 mx-auto'>
+      <h3>Edit user</h3><hr>
+      <form method='post' action='{{url_for("edit_user",uid=datas.UID)}}'>
+        <div class='form-group'>
+          <label>First Name</label>
+          <input type='text' name='uname' required class='form-control' value='{{datas.UNAME}}'>
+        </div>
+        <div class='form-group'>
+          <label>Last Name</label>
+          <input type='text' name='lname' required class='form-control' value='{{datas.Lastname}}'>
+        <div class='form-group'>
+          <label>Contact</label>
+          <input type='text' name='contact' required class='form-control' value='{{datas.CONTACT}}'>
+        </div>
+
+        <div class='form-group'>
+          <label>Email</label>
+          <input type='text' name='email' required class='form-control' value='{{datas.EMAIL}}'>
+        </div>
+
+        <div class='form-group'>
+          <label>Coumpany Email</label>
+          <input type='text' name='coumpanyemail' required class='form-control' value='{{datas.COUMPANYEMAIL}}'>
+        </div>
+        
+        <div class='form-group'>
+          <label>Domine</label>
+          <input type='text' name='domine' required class='form-control' value='{{datas.Domine}}'>
+        </div>
+
+        <div class='form-group'>
+          <label>Clients</label>
+          <input type='text' name='cilents' required class='form-control' value='{{datas.CILENTS}}'>
+        </div>
+
+        <div class='form-group'>
+          <label>Inital Email</label>
+          <select name="email1" class='form-control' >
+            <option selected>{{datas.REMARKS}}</option>
+            <option value="seen">seen</option>
+            <option value="2sent">sent</option>
+            <option value="replaied">replaied</option>
+            <option value="Email notsent">email notsent</option>
+            <option value="not tracked">not tracked</option>
+            <option value="Booked">Booked</option>
+          </select>
+        </div>
+        <div class='form-group'>
+          <label>Followup Email 1</label>
+          <select name="email2" class='form-control' >
+            <option selected>{{datas.REMARKS1}}</option>
+            <option value="seen">seen</option>
+            <option value="2sent">sent</option>
+            <option value="replaied">replaied</option>
+            <option value="Email notsent">email notsent</option>
+            <option value="not tracked">not tracked</option>
+            <option value="Booked">Booked</option>
+          </select>
+        </div>
+        <div class='form-group'>
+          <label>Followup Email 2</label>
+          <select name="email3" class='form-control' >
+            <option selected>{{datas.REMARKS2}}</option>
+            <option value="seen">seen</option>
+            <option value="2sent">sent</option>
+            <option value="replaied">replaied</option>
+            <option value="Email notsent">email notsent</option>
+            <option value="not tracked">not tracked</option>
+            <option value="Booked">Booked</option>
+          </select>
+        </div>
+        <div class='form-group'>
+          <label>Followup Email 3</label>
+          <select name="email4" class='form-control' >
+            <option selected>{{datas.REMARKS3}}</option>
+            <option value="seen">seen</option>
+            <option value="2sent">sent</option>
+            <option value="replaied">replaied</option>
+            <option value="Email notsent">email notsent</option>
+            <option value="not tracked">not tracked</option>
+            <option value="Booked">Booked</option>
+          </select>
+        </div>
+        <div class='form-group'>
+        <label>Notes</label>
+          <input type='text' name='notes'  class='form-control'>
+        </div>
+
+        <input type='submit' value='Submit' class='btn btn-primary'>
+      </form>
+    </div>
+  </div>
+{% endblock %}
